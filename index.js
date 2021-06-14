@@ -51,10 +51,7 @@ app.use(express.static('./public'));
 
 
 app.get('/', (req, res) => {
-    let files = fs.readdirSync(__dirname + '/images');
-    res.render('index', {
-        files: files
-    })
+    res.render('index')
 })
 
 app.post('/', function (req, res) {
