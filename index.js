@@ -6,7 +6,7 @@ const multer = require('multer');
 const ejs = require('ejs');
 let fs = require('fs');
 const app = express();
-const port = 1111;
+const port = process.env.PORT || 1111;
 
 const storage = multer.diskStorage({
     destination: './public/uploads',
